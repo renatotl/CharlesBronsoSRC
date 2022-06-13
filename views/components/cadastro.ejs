@@ -1,0 +1,38 @@
+<main>
+        
+    <section id="cadastrar">
+        
+
+        <img id="foto2" src="img/escrivanilha.jpg" alt="escrivanilha">
+        
+            <!--se filme for undefined o if irá rodar o código de baixo-->
+            <h2 id="cf"> Cadastrar Filme </h2>
+            <!-- 0 Action do form recebe as informações Esse atributo é o responsável por dizer para onde os dados serão enviados, ou seja, para qual rota no meu back-end esse dados vão, para que lá no back-end eles sejam tratados, esse tratamento pode ser, guarda-los em memoria temporária ou persistir esses dados em algum banco de dados. Nas próximas semanas vamos aprender essa persistência, por ora vamos armazenar em memória.-->
+            <form id="form" action="/add" method="POST">
+                <!-- esse add manda a informação lá pro js-->
+                <!--Esse atributo é responsável por dizer como nossos dados serão enviados para a rota determinada, existem duas formas de enviar esses dados, pelo método GET ou POST-->
+
+                <div>
+                    <label id="label1" for="nome">Nome: </label>
+                    <input type="text" name="nome" id="nome" placeholder="Digite o nome do filme" required>
+                </div>
+                <div>
+                    <label id="label2" for="descricao">Descrição: </label>
+                    <input type="text" name="descricao" id="Descrição" placeholder="Digite a Descrição" required>
+                </div>
+                
+                <div>
+                    <label id="label4" for="imagem">imagem: </label>
+                    <input type="text" name="imagem" id="imagem" placeholder="Cole o endereço do link da imagem"
+                        required>
+                </div>
+
+                <button id="btCadastrar" type="submit">Cadastrar</button>
+            </form>
+
+           
+
+                
+    </section>
+
+</main>

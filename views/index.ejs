@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <%- include('./components/head') %><!--assim que chamamos o head em componentes pra ca-->
+<body>
+    
+    <%- include('./components/nav') %>
+ 
+   <header>
+       <img src="img/fotoprincipal.jpg" alt="fotoprincipal">
+   </header>
+
+   <section id="cards">
+    <!--section card  possível stylirizar-->
+    <% FilmesBronson.forEach((filme)=> { %>
+        <!--essa estrutura precisa ser fechada na emsma linha   <%  %>-->
+        <div class="card">
+            <!--possível stylirizar card por card-->
+            <!--o foreach vai criar várias div para separar em vários cardizinhos-->
+            <img id="tamanho" src=" <%= filme.imagem %>" alt="">
+            <!-- essa sintex que pegamos links do JS esse sinal de = é porque é apresentado uma variável para acessar os itens de um OBJETO colocamos o PONTO-->
+            <h2>
+                <%= filme.nome %>
+            </h2>
+            <p class="descricao">
+                <%= filme.descricao %>
+            </p>
+            <p>Tipo: <%= filme.tipo %>
+            </p>
+            <p id="doId"> Id <%= filme.id %></p><!-- o sinal de igual foi essencial para funcionar-->
+            
+        </div>
+        <% }) %>
+            <!--precisamos dessa sintex para escrever em javaScript no thml-->
+</section>
+</body>
+
+<footer id="f">
+<p>Desenvolvido por Renato Tenório</p>
+
+</footer>
+</html>
