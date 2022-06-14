@@ -83,3 +83,21 @@ ROUTES é o caminho da minhas rotas
 O cliente clica em cadastrar o programa vai em ROUTES e ver qual é a rota cadastrar, acha a rota cadastrar exemplo create e vai lá no CONTROLLERS acha a rota create entra dentro dela e executa o que tem que executar e passa as informações pra MODELS 
 
 HIERARQUIA    INDEX pra ROTA pra CONTROLLER e depois pra MODEL
+
+------------------------------DEPLOY-----------------
+
+ como agora estamos usando o banco de dados vamos seguir o passo a passo:
+
+ Criar nome em letra minúscula o nome não pode existir e estados unidos criar 
+ ------------
+ Criando banco de dados
+  1 resources, em ADD ONS: heroku postgres, Plan name: Hobby Dev-Free, submit e bc criado.
+  2 deply, github e pegar o nome do repositório e colar em re-po name,conect, enable eutomac deplay(toda vez que fizer um commit ele atualizar automáticamente), deplay branch
+  3 precisamos das ariáveis de hamiente no heroku, em settings, clieque em Config Vars e copie DATABASE_URL
+  lembrando que em DATABASE, BD.EJ apague os campos: process.env.DB_BASE,
+    process.env.DB_USER,
+    process.env.DB_PASS, e host: process.env.DB_HOST,
+        port: 5432, 
+        na linha logo abaide de :const sequelize = new Sequelize(
+          escreva: proces.env.DATABASE_URL,  A VÍRUGALA faz parte do code!
+          
