@@ -100,4 +100,20 @@ HIERARQUIA    INDEX pra ROTA pra CONTROLLER e depois pra MODEL
         port: 5432, 
         na linha logo abaide de :const sequelize = new Sequelize(
           escreva: proces.env.DATABASE_URL,  A VÍRUGALA faz parte do code!
- 4 logo abaixo de  dialect: "postgres" coloque         
+ 4 logo abaixo de  dialect: "postgres" coloque: dialectOption: {
+            ssl: {
+                require: true,
+                rejecUnauthorized: false,
+            },
+        },    
+
+ EM MODELS            
+antes de 
+module.exports = FilmeB;
+coloque : const iniTable =async () =>{
+
+    await FilmeB.sync();
+}
+initTable()
+--
+ele cra essa tabela no nosso bc

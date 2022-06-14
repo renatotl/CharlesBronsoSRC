@@ -36,4 +36,11 @@ const FilmeB = database.define(
 
 );
 
+const initTable =async () =>{
+
+    await FilmeB.sync();
+}
+
+initTable()
+
 module.exports = FilmeB;//exportar o Filme
