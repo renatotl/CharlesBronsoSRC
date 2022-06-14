@@ -8,9 +8,12 @@ const sequelize = new Sequelize(
         dialectOption: {
             ssl: {
                 require: true,
-                rejecUnauthorized: false,
+                rejectUnauthorized: false,
             },
         },
     }
 );
+
+
+
 module.exports = sequelize;
